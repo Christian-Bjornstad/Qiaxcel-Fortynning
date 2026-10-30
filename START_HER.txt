@@ -1,0 +1,19 @@
+QIAXCEL FORTYNNING 0.2.0
+
+INSTALLASJON
+1. Pakk ut hele mappen til en fast plassering.
+2. Kjør QIAXCEL_INSTALL.cmd.
+3. Lim inn kommandoen i Python FELLES og trykk Enter.
+4. Lukk FELLES etter installasjon.
+
+START
+Kjør QIAXCEL_START.cmd og lim inn kommandoen i FELLES.
+
+BRUK
+Velg rapporter → Les → Velg eventuell analyse/bp → Kontroller → Eksporter.
+
+RFU-faktor: 1000 som standard (2,71 → 2710 RFU).
+Flere topper i søkevinduet krever et eksplisitt bp-valg.
+Excel-mal krever .xlsx og tilpasset JSON-celleprofil.
+
+Tekniske detaljer: README.md og docs/.

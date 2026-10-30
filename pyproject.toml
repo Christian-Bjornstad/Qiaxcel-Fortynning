@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qiaxcel-fortynning"
+version = "0.2.0"
+description = "Lokal QIAxcel PDF- og Excel-hjelper for PCR-fortynning"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+dependencies = ["pdfplumber==0.11.9", "openpyxl==3.1.5", "PyQt6>=6.7,<7"]
+
+[project.urls]
+Repository = "https://github.com/Christian-Bjornstad/Qiaxcel-Fortynning"
+
+[project.scripts]
+qiaxcel-fortynning = "qiaxcel.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+qiaxcel = ["assets/*.svg", "assets/*.ico", "assets/*.png"]

@@ -1,0 +1,10 @@
+{
+  "sheet": "Oppsett",
+  "rows": [
+    {
+      "report": "min_rapport.pdf",
+      "position": "A01",
+      "cells": {"bp": "D8", "rfu": "E8", "dilution": "F8"}
+    }
+  ]
+}
