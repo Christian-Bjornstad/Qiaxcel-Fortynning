@@ -32,7 +32,6 @@ QWidget { font-family: "Segoe UI"; font-size: 10pt; color: #173746; }
 QMainWindow, QWidget#workspace { background: #F2F6F8; }
 QFrame#sidebar { background: #123443; border: none; }
 QLabel#brand { color: #FFFFFF; font-size: 16pt; font-weight: 650; }
-QLabel#brandSubtitle { color: #C1D5DF; font-size: 9pt; }
 QPushButton#nav { background: transparent; color: #D6E5ED; text-align: left;
     border: none; border-radius: 7px; padding: 12px 16px; font-weight: 550; }
 QPushButton#nav:hover { background: #1A4658; }
@@ -228,7 +227,7 @@ class App(QMainWindow):
         self.unsaved_changes = False
         self.active_settings = {'factor': 1000, 'tolerance': 20}
         self._read_thread = None
-        self.setWindowTitle('QIAxcel Fortynning')
+        self.setWindowTitle('QIAxcel')
         self.setWindowIcon(QIcon(str(ASSETS / 'qiaxcel.svg')))
         self.resize(1320, 900)
         available = self.screen().availableGeometry()
@@ -249,9 +248,11 @@ class App(QMainWindow):
         icon = QLabel()
         icon.setPixmap(self.windowIcon().pixmap(42, 42))
         icon.setAccessibleName('Ett cyan PCR-toppikon')
+        icon.setAlignment(Qt.AlignmentFlag.AlignCenter)
         nav.addWidget(icon)
-        nav.addWidget(label('QIAxcel', 'brand'))
-        nav.addWidget(label('FORTYNNING', 'brandSubtitle'))
+        brand = label('QIAxcel', 'brand')
+        brand.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        nav.addWidget(brand)
         nav.addSpacing(30)
         self.nav_buttons = []
         for index, (text, icon_name) in enumerate([('Rapporter', 'import'), ('Resultater', 'results'),
